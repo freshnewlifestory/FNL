@@ -75,23 +75,32 @@ font-size:14px;
 line-height:1.6;
 }
 
+.badge{
+display:inline-block;
+margin-top:10px;
+padding:7px 15px;
+background:#2563eb;
+color:white;
+border-radius:999px;
+font-size:12px;
+font-weight:600;
+}
+
 .socials{
 display:flex;
 justify-content:center;
 gap:12px;
-margin-bottom:25px;
+margin:25px 0;
 }
 
 .socials a{
-text-decoration:none;
-font-size:22px;
-background:rgba(255,255,255,0.12);
-width:45px;
-height:45px;
+width:50px;
+height:50px;
 display:flex;
 align-items:center;
 justify-content:center;
 border-radius:50%;
+background:rgba(255,255,255,0.12);
 transition:.3s;
 }
 
@@ -99,8 +108,16 @@ transition:.3s;
 transform:translateY(-4px);
 }
 
+.socials img{
+width:26px;
+height:26px;
+}
+
 .link{
-display:block;
+display:flex;
+align-items:center;
+justify-content:center;
+gap:12px;
 text-decoration:none;
 color:white;
 font-weight:600;
@@ -113,25 +130,21 @@ transition:.3s;
 }
 
 .link:hover{
-transform:scale(1.04);
+transform:scale(1.03);
 background:rgba(255,255,255,0.20);
+}
+
+.mini-logo{
+width:30px;
+height:30px;
+border-radius:50%;
+object-fit:cover;
 }
 
 .footer{
 margin-top:25px;
 color:#cbd5e1;
 font-size:13px;
-}
-
-.badge{
-display:inline-block;
-margin-top:10px;
-padding:7px 15px;
-background:#2563eb;
-color:white;
-border-radius:999px;
-font-size:12px;
-font-weight:600;
 }
 </style>
 </head>
@@ -154,26 +167,43 @@ Follow me on all platforms and stay connected with my latest content.
 </p>
 
 <div class="socials">
-<a href="https://youtube.com/@freshnewlifestory">▶️</a>
-<a href="https://facebook.com/freshnewlifestory">📘</a>
-<a href="https://instagram.com/freshnewlifestory">📷</a>
-<a href="https://tiktok.com/@freshnewlifestory">🎵</a>
+
+<a href="https://youtube.com/@freshnewlifestory" target="_blank">
+<img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png">
+</a>
+
+<a href="https://facebook.com/freshnewlifestory" target="_blank">
+<img src="https://cdn-icons-png.flaticon.com/512/733/733547.png">
+</a>
+
+<a href="https://instagram.com/freshnewlifestory" target="_blank">
+<img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png">
+</a>
+
+<a href="https://tiktok.com/@freshnewlifestory" target="_blank">
+<img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png">
+</a>
+
 </div>
 
-<a class="link" href="https://youtube.com/@freshnewlifestory">
-🎬 YouTube Channel
+<a class="link" href="https://youtube.com/@freshnewlifestory" target="_blank">
+<img src="https://avatars.githubusercontent.com/freshnewlifestory" class="mini-logo">
+YouTube Channel
 </a>
 
-<a class="link" href="https://facebook.com/freshnewlifestory">
-📘 Facebook Page
+<a class="link" href="https://facebook.com/freshnewlifestory" target="_blank">
+<img src="https://avatars.githubusercontent.com/freshnewlifestory" class="mini-logo">
+Facebook Page
 </a>
 
-<a class="link" href="https://instagram.com/freshnewlifestory">
-📸 Instagram Profile
+<a class="link" href="https://instagram.com/freshnewlifestory" target="_blank">
+<img src="https://avatars.githubusercontent.com/freshnewlifestory" class="mini-logo">
+Instagram Profile
 </a>
 
-<a class="link" href="https://tiktok.com/@freshnewlifestory">
-🎵 TikTok Account
+<a class="link" href="https://tiktok.com/@freshnewlifestory" target="_blank">
+<img src="https://avatars.githubusercontent.com/freshnewlifestory" class="mini-logo">
+TikTok Account
 </a>
 
 <div class="footer">
