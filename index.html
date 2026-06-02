@@ -23,27 +23,11 @@ body{
   justify-content:center;
   align-items:center;
   background: linear-gradient(135deg,#000814,#001d3d,#003566);
-  overflow:hidden;
-}
-
-/* Background Glow Animation */
-body::before{
-  content:"";
-  position:absolute;
-  width:200%;
-  height:200%;
-  background: radial-gradient(circle,#00bfff22,transparent 40%);
-  animation: moveBg 10s linear infinite;
-}
-
-@keyframes moveBg{
-  0%{transform:translate(0,0);}
-  100%{transform:translate(-200px,-200px);}
 }
 
 /* CARD */
 .card{
-  width:90%;
+  width:92%;
   max-width:380px;
   padding:25px;
   border-radius:25px;
@@ -52,13 +36,7 @@ body::before{
   text-align:center;
   color:#fff;
   box-shadow:0 0 40px rgba(0,0,0,0.8);
-  transform:scale(1.05);
-  animation: zoomIn 1s ease;
-}
-
-@keyframes zoomIn{
-  from{transform:scale(0.8);opacity:0;}
-  to{transform:scale(1.05);opacity:1;}
+  transform:scale(1.08);
 }
 
 /* PROFILE */
@@ -68,54 +46,41 @@ body::before{
   border-radius:50%;
   margin:auto;
   border:4px solid #00bfff;
-  background:url("https://i.imgur.com/yourimage.png") center/cover;
+  background:url("https://github.com/freshnewlifestory.png") center/cover;
   box-shadow:0 0 20px #00bfff;
 }
 
-/* NAME */
 h1{
   margin-top:15px;
   font-size:22px;
-  font-weight:700;
   color:#00bfff;
 }
 
-/* USERNAME */
 .username{
   font-size:14px;
   opacity:0.8;
-  margin-top:5px;
 }
 
-/* DESC */
-.desc{
-  margin-top:15px;
-  font-size:13px;
-  line-height:1.5;
-  opacity:0.9;
-}
-
-/* SOCIAL ICONS */
+/* SOCIAL ICON */
 .social{
   margin-top:20px;
 }
 
-.social a{
+.social a img{
+  width:30px;
   margin:0 8px;
-  font-size:20px;
-  text-decoration:none;
-  color:#fff;
   transition:0.3s;
 }
 
-.social a:hover{
-  color:#00bfff;
+.social a img:hover{
   transform:scale(1.2);
 }
 
 /* BUTTON */
 .btn{
-  display:block;
+  display:flex;
+  align-items:center;
+  gap:10px;
   margin-top:15px;
   padding:12px;
   border-radius:15px;
@@ -123,6 +88,11 @@ h1{
   text-decoration:none;
   color:#fff;
   transition:0.3s;
+}
+
+.btn img{
+  width:25px;
+  border-radius:50%;
 }
 
 .btn:hover{
@@ -147,24 +117,44 @@ footer{
 <div class="profile"></div>
 
 <h1>FRESH NEW LIFE STORY</h1>
-
 <div class="username">@freshnewlifestory</div>
 
-<div class="desc">
-Stay connected with me on all platforms 🚀
-</div>
-
+<!-- SOCIAL ICONS -->
 <div class="social">
-  <a href="#">▶️</a>
-  <a href="#">📘</a>
-  <a href="#">📸</a>
-  <a href="#">🎵</a>
+  <a href="https://www.youtube.com/@freshnewlifestory" target="_blank">
+    <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png">
+  </a>
+  <a href="https://www.facebook.com/freshnewlifestory" target="_blank">
+    <img src="https://cdn-icons-png.flaticon.com/512/1384/1384053.png">
+  </a>
+  <a href="https://www.instagram.com/freshnewlifestory" target="_blank">
+    <img src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png">
+  </a>
+  <a href="https://www.tiktok.com/@freshnewlifestory" target="_blank">
+    <img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png">
+  </a>
 </div>
 
-<a href="#" class="btn">YouTube Channel</a>
-<a href="#" class="btn">Facebook Page</a>
-<a href="#" class="btn">Instagram Profile</a>
-<a href="#" class="btn">TikTok Account</a>
+<!-- BUTTONS -->
+<a href="https://www.youtube.com/@freshnewlifestory" class="btn" target="_blank">
+  <img src="https://github.com/freshnewlifestory.png">
+  YouTube Channel
+</a>
+
+<a href="https://www.facebook.com/freshnewlifestory" class="btn" target="_blank">
+  <img src="https://github.com/freshnewlifestory.png">
+  Facebook Page
+</a>
+
+<a href="https://www.instagram.com/freshnewlifestory" class="btn" target="_blank">
+  <img src="https://github.com/freshnewlifestory.png">
+  Instagram Profile
+</a>
+
+<a href="https://www.tiktok.com/@freshnewlifestory" class="btn" target="_blank">
+  <img src="https://github.com/freshnewlifestory.png">
+  TikTok Account
+</a>
 
 <footer>Made with ❤️ by FNL Sakib</footer>
 
