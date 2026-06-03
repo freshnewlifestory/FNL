@@ -12,54 +12,60 @@
   font-family:'Poppins', sans-serif;
 }
 
-body{
-  min-height:100vh; /* height এর বদলে min-height ব্যবহার করা নিরাপদ */
+html, body {
+  width: 100%;
+  height: 100vh;
+  /* স্ক্রিন ফিক্সড রাখার প্রধান চাবিকাঠি */
+  overflow: hidden; 
+  position: relative;
+}
+
+body {
   display:flex;
   justify-content:center;
   align-items:center;
   background: radial-gradient(circle at top,#001d3d,#000814);
-  /* overflow সরিয়ে দেওয়া হয়েছে যাতে স্ক্রিন ফিট হতে সমস্যা না হয় */
-  position: relative;
 }
 
-/* Glow BG */
-body::before{
+/* Glow BG - এটাকে স্ক্রিনের ভেতরের সাইজে লক করা হয়েছে */
+body::before {
   content:"";
   position:absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background:radial-gradient(circle,#00bfff22,transparent 40%);
-  animation:move 10s linear infinite;
+  background: radial-gradient(circle at 50% 30%, #00bfff22, transparent 60%);
+  animation: move 6s ease-in-out infinite alternate;
   z-index: 1;
+  pointer-events: none; /* যাতে বাটনে ক্লিকে সমস্যা না হয় */
 }
 
-@keyframes move{
-  0%{transform:translate(0,0);}
-  50%{transform:translate(-50px,-50px);} /* এনিমেশন স্ক্রিনের বাইরে যাওয়া আটকাবে */
-  100%{transform:translate(0,0);}
+/* এনিমেশনটি এখন স্ক্রিনের বাইরে যাবে না, শুধু অপাসিটি ও স্কেল পরিবর্তন হবে */
+@keyframes move {
+  0% { transform: scale(1); opacity: 0.8; }
+  100% { transform: scale(1.1); opacity: 1; }
 }
 
 /* CARD */
 .card{
   width:90%;
-  max-width:360px; /* মোবাইল স্ক্রিনের জন্য পারফেক্ট সাইজ */
+  max-width:360px;
   padding:25px;
   border-radius:25px;
   background:rgba(255,255,255,0.05);
   backdrop-filter:blur(20px);
-  -webkit-backdrop-filter:blur(20px); /* Safari ব্রাউজারের জন্য */
+  -webkit-backdrop-filter:blur(20px);
   text-align:center;
   color:#fff;
-  box-shadow:0 0 40px #00bfff55;
-  animation:zoom 1s ease;
+  box-shadow:0 0 40px #00bfff44;
+  animation:zoom 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   position: relative;
-  z-index: 2; /* কার্ডটি যেন ব্যাকগ্রাউন্ডের উপরে থাকে */
+  z-index: 2;
 }
 
 @keyframes zoom{
-  from{transform:scale(0.8);opacity:0;}
+  from{transform:scale(0.85);opacity:0;}
   to{transform:scale(1);opacity:1;}
 }
 
@@ -112,7 +118,7 @@ h1{
 
 .btn img{
   width:25px;
-  border-radius: 50%; /* প্রোফাইল পিকচারটি গোল দেখানোর জন্য */
+  border-radius: 50%;
 }
 
 .btn:hover{
