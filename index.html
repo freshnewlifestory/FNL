@@ -45,10 +45,10 @@ body::before {
   100% { transform: scale(1.1); opacity: 1; }
 }
 
-/* CARD - কার্ডটি আরেকটু জুম/বড় করার জন্য max-width এবং padding বাড়ানো হয়েছে */
+/* CARD - বড় রেড মার্ক অনুযায়ী শ্যাডো আরও ডার্ক ও গাঢ় করা হয়েছে */
 .card{
   width:92%;
-  max-width:400px; /* আগের চেয়ে বড় ও প্রিমিয়াম দেখাবে */
+  max-width:400px;
   padding:30px 25px;
   border-radius:25px;
   background:rgba(255,255,255,0.05);
@@ -56,7 +56,9 @@ body::before {
   -webkit-backdrop-filter:blur(20px);
   text-align:center;
   color:#fff;
-  box-shadow:0 0 45px #00bfff33;
+  /* এখানে শ্যাডো ও গ্লো ডার্ক করা হয়েছে */
+  box-shadow: 0 0 50px rgba(0, 191, 255, 0.45), inset 0 0 15px rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   animation:zoom 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   position: relative;
   z-index: 2;
@@ -69,7 +71,7 @@ body::before {
 
 /* PROFILE */
 .profile{
-  width:125px; /* লোগো সামান্য বড় করা হয়েছে */
+  width:125px;
   height:125px;
   border-radius:50%;
   margin:auto;
@@ -81,13 +83,12 @@ body::before {
 /* NAME */
 h1{
   margin-top:15px;
-  font-size:24px; /* ফন্ট সাইজ সামান্য বাড়ানো হয়েছে */
+  font-size:24px;
   color:#00bfff;
   font-weight: 700;
-  letter-spacing: 0.5px;
 }
 
-/* USERNAME - নামের নিচে ছোট ইউজারনেম */
+/* USERNAME */
 .username {
   font-size: 14px;
   color: #a0aec0;
@@ -96,30 +97,37 @@ h1{
   opacity: 0.85;
 }
 
-/* SOCIAL ICONS */
+/* SOCIAL ICONS - ছোট রেড মার্ক অনুযায়ী গোল ও মার্জিত করা হয়েছে */
 .social{
-  margin-top:18px;
-  margin-bottom: 5px;
+  margin-top:20px;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
 }
 
 .social a img{
-  width:34px; /* সোশ্যাল আইকনগুলো একটু বড় করা হয়েছে */
-  margin:0 10px;
-  transition:0.3s;
+  width:38px;
+  height: 38px;
+  padding: 6px; /* আইকনটি গোল বর্ডারের ভেতরে সুন্দর দেখানোর জন্য */
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%; /* গোল করা হয়েছে */
+  transition: 0.3s;
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .social a img:hover{
-  transform:scale(1.2);
+  transform:scale(1.15);
+  background: #00bfff;
+  border-color: #00bfff;
 }
 
-/* BIO BOX - সাবস্ক্রাইব বাটনের পরিবর্তে আপনার সুন্দর বায়ো */
+/* BIO BOX */
 .bio-box {
-  margin-top: 20px;
-  margin-bottom: 10px;
+  margin: 20px 0;
   padding: 15px;
   background: rgba(255, 255, 255, 0.04);
-  border-left: 3px solid #00bfff; /* বাম পাশে সুন্দর সায়ান বর্ডার */
-  border-radius: 10px;
+  border-left: 3px solid #00bfff;
+  border-radius: 12px;
   font-size: 13.5px;
   line-height: 1.6;
   text-align: left;
@@ -132,14 +140,13 @@ h1{
   align-items:center;
   gap:12px;
   margin-top:14px;
-  padding:14px; /* বাটনগুলো ক্লিক করার সুবিধার্থে আরেকটু বড় করা হয়েছে */
+  padding:14px;
   border-radius:15px;
   text-decoration:none;
   color:#fff;
   background:rgba(255,255,255,0.08);
   transition:0.3s;
   font-size: 15px;
-  font-weight: 500;
 }
 
 .btn img{
@@ -160,27 +167,24 @@ footer{
 }
 </style></head><body><div class="card">
   <div class="profile"></div>
-  
   <h1>FRESH NEW LIFE STORY</h1>
-  <!-- নতুন ইউজারনেম পার্ট -->
   <div class="username">@freshnewlifestory</div>
   
   <div class="social">
     <a href="https://www.youtube.com/@freshnewlifestory" target="_blank">
-      <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png">
+      <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube">
     </a>
     <a href="https://www.facebook.com/freshnewlifestory" target="_blank">
-      <img src="https://cdn-icons-png.flaticon.com/512/1384/1384053.png">
+      <img src="https://cdn-icons-png.flaticon.com/512/1384/1384053.png" alt="Facebook">
     </a>
     <a href="https://www.instagram.com/freshnewlifestory" target="_blank">
-      <img src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png">
+      <img src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png" alt="Instagram">
     </a>
     <a href="https://www.tiktok.com/@freshnewlifestory" target="_blank">
-      <img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png">
+      <img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png" alt="TikTok">
     </a>
   </div>
 
-  <!-- আপনার দেওয়া নতুন বায়ো টেক্সট -->
   <div class="bio-box">
     👋 আমি সোশ্যাল মিডিয়ায় নতুন, তোমরা সবাই আমাকে সাপোর্ট করো। আমার সকল সোশ্যাল মিডিয়া অ্যাকাউন্টে তোমাদের উৎসাহের কারণে আমি আরও ভালো কনটেন্ট তৈরি করব। ধন্যবাদ!
   </div>
