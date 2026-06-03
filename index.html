@@ -1,7 +1,10 @@
 <!DOCTYPE html><html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Fresh New Life Story</title><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet"><style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Fresh New Life Story</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
 *{
   margin:0;
   padding:0;
@@ -10,46 +13,54 @@
 }
 
 body{
-  height:100vh;
+  min-height:100vh; /* height এর বদলে min-height ব্যবহার করা নিরাপদ */
   display:flex;
   justify-content:center;
   align-items:center;
   background: radial-gradient(circle at top,#001d3d,#000814);
-  overflow:hidden;
+  /* overflow সরিয়ে দেওয়া হয়েছে যাতে স্ক্রিন ফিট হতে সমস্যা না হয় */
+  position: relative;
 }
 
 /* Glow BG */
 body::before{
   content:"";
   position:absolute;
-  width:200%;
-  height:200%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background:radial-gradient(circle,#00bfff22,transparent 40%);
   animation:move 10s linear infinite;
+  z-index: 1;
 }
 
 @keyframes move{
   0%{transform:translate(0,0);}
-  100%{transform:translate(-200px,-200px);}
+  50%{transform:translate(-50px,-50px);} /* এনিমেশন স্ক্রিনের বাইরে যাওয়া আটকাবে */
+  100%{transform:translate(0,0);}
 }
 
 /* CARD */
 .card{
-  width:92%;
-  max-width:380px;
+  width:90%;
+  max-width:360px; /* মোবাইল স্ক্রিনের জন্য পারফেক্ট সাইজ */
   padding:25px;
   border-radius:25px;
   background:rgba(255,255,255,0.05);
   backdrop-filter:blur(20px);
+  -webkit-backdrop-filter:blur(20px); /* Safari ব্রাউজারের জন্য */
   text-align:center;
   color:#fff;
   box-shadow:0 0 40px #00bfff55;
   animation:zoom 1s ease;
+  position: relative;
+  z-index: 2; /* কার্ডটি যেন ব্যাকগ্রাউন্ডের উপরে থাকে */
 }
 
 @keyframes zoom{
   from{transform:scale(0.8);opacity:0;}
-  to{transform:scale(1.08);opacity:1;}
+  to{transform:scale(1);opacity:1;}
 }
 
 /* PROFILE */
@@ -101,6 +112,7 @@ h1{
 
 .btn img{
   width:25px;
+  border-radius: 50%; /* প্রোফাইল পিকচারটি গোল দেখানোর জন্য */
 }
 
 .btn:hover{
@@ -112,7 +124,7 @@ h1{
 /* YT SUBSCRIBE ANIMATION */
 .subscribe{
   margin-top:20px;
-  padding:12px;
+  padding:12px 25px;
   border-radius:50px;
   background:red;
   color:#fff;
@@ -132,10 +144,6 @@ footer{
   font-size:12px;
   opacity:0.7;
 }
-  .card{
-    width: 95%;
-    max-width: 420px;
-  }
 </style></head><body><div class="card"><div class="profile"></div><h1>FRESH NEW LIFE STORY</h1><div class="social">
   <a href="https://www.youtube.com/@freshnewlifestory" target="_blank">
     <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png">
